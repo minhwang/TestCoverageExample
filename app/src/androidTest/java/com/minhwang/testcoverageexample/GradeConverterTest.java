@@ -37,4 +37,20 @@ public class GradeConverterTest {
 
         Assert.assertEquals("B", grade);
     }
+
+    @Test
+    public void testWhenScoreIsFrom80ToLessThan90_thenShouldReturnB() {
+        GradeConverter converter = new GradeConverter();
+        String grade = converter.convert(85);
+
+        Assert.assertEquals("B", grade);
+    }
+
+    @Test
+    public void testWhenScoreIsLessThan80_thenShouldReturnC() {
+        GradeConverter converter = new GradeConverter();
+        String grade = converter.convert(35);
+
+        Assert.assertEquals("C", grade);
+    }
 }
