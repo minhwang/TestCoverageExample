@@ -5,6 +5,7 @@ package com.minhwang.testcoverageexample;
  */
 public class GradeConverter {
     public String convert(int score) {
+        if (score < 90) { return "B"; }
         return "A";
     }
 }

@@ -29,4 +29,12 @@ public class GradeConverterTest {
 
         Assert.assertEquals("A", grade);
     }
+
+    @Test
+    public void testWhenScoreIsLessThan90_thenShouldReturnB() {
+        GradeConverter converter = new GradeConverter();
+        String grade = converter.convert(50);
+
+        Assert.assertEquals("B", grade);
+    }
 }
